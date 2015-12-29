@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myToDoApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>My shopping list</title>   
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="angular.min.js"></script>
+    <script src="angular-contenteditable.js"></script>
+    <script src="ngStorage.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="myToDoAppController">
+    <!-- <div class="gwd-div-bkij" id="background"></div> -->
+    <!-- <div class="gwd-div-1stp" id="phone"> -->
+        <div class="gwd-div-1vyq" id="title"> My shopping list </div>
+        <div class="gwd-div-1n6y" id="body">
+            <div ng-repeat="item in model" class="gwd-div-1g9m" ng-class="{done: item.done == true}" ng-switch="item.done">
+                <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="true">
+                   <!-- {{item.text}} -->
+                </div>
+                <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone($index)"></div>
+                <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo($index)"></div>
+            </div>
+        </div>
+        <div class="gwd-div-cb5l" id="button" ng-click="addToDo()">+</div>
+    <!-- </div> -->
+</body>
+
+</html>
