@@ -226,15 +226,16 @@ body {
 
 .gwd-div-pjjz-r {
     position: absolute;
-    font-size: 30px;
+    font-size: 18px;
     text-align: right;
-    line-height: 1.2;
-    color: #B2DFDB;
+    padding-right: 5px;
+    line-height: 2;
+    color: #67afa9;
     height: 100%;
     top: 50%;
     margin-top: -20px;
     right: 1%;
-    width: 40px;
+    width: 30px;
     height: 40px;
     cursor: pointer;
 }
