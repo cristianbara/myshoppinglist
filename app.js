@@ -1,11 +1,11 @@
 var model = [
     {
-        text: 'Something you baught',
-        done: true
-    },
-    {
         text: 'Something you still have to buy',
         done: false
+    },
+    {
+        text: 'Something you baught',
+        done: true
     },
 
 ];
