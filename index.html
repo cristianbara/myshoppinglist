@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My shopping list</title>   
+    <title>My shopping list</title>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="angular.min.js"></script>
     <script src="angular-contenteditable.js"></script>
     <script src="ngStorage.js"></script>
@@ -15,17 +16,25 @@
 <body ng-controller="myToDoAppController">
     <!-- <div class="gwd-div-bkij" id="background"></div> -->
     <!-- <div class="gwd-div-1stp" id="phone"> -->
-        <div class="gwd-div-1vyq" id="title"> My shopping list </div>
-        <div class="gwd-div-1n6y" id="body">
-            <div ng-repeat="item in model" class="gwd-div-1g9m" ng-class="{done: item.done == true}" ng-switch="item.done">
-                <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="true">
-                   <!-- {{item.text}} -->
-                </div>
-                <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone($index)"></div>
-                <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo($index)"></div>
+    <div class="gwd-div-1vyq" id="title"> <img src="icon_x.png" class="titleIcon"> My Shopping List </div>
+    <div class="gwd-div-1n6y" id="body">
+        <div ng-repeat="item in model" class="gwd-div-1g9m" ng-class="{done: item.done == true}" ng-switch="item.done">
+            <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="true">
+                <!-- {{item.text}} -->
+            </div>
+            <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
+            <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
+            <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
+                <i class="material-icons">replay</i>
             </div>
         </div>
-        <div class="gwd-div-cb5l" id="button" ng-click="addToDo()">+</div>
+    </div>
+    <div class="gwd-div-cb5l" id="button" ng-click="addToDo()">
+        <i class="material-icons">add</i>
+    </div>
+    <div class="gwd-div-cb5l1" id="button" ng-click="orderModel()" ng-show="false">
+        <i class="material-icons">import_export</i>
+    </div>
     <!-- </div> -->
 </body>
 
