@@ -9,6 +9,7 @@ var model = [
     },
 
 ];
+
 var openURL = function (url) {
     if(device.platform === 'Android') {
         navigator.app.loadUrl(url, {openExternal:true});
