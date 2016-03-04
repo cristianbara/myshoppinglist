@@ -23,12 +23,19 @@
     </div>
     <img src="icon_x.png" class="titleIcon" ng-click="toggleMenu()">
     <div id="sliding-menu" class="sliding-menu" ng-if="showMenu">
-        <div id="top-spacer" class="menu-item">
+        <div id="top-spacer" class="menu-item" style="margin-bottom: 30px;">
             <!-- leave empty -->
         </div>
         <div id="reset-list" class="menu-item" ng-click="resetList()">
             <i class="material-icons md-light">autorenew</i>
         </div>
+        <div id="delete-list" class="menu-item" ng-click="deleteList()">
+            <i class="material-icons md-light">delete</i>
+        </div>
+        
+        <a href="https://cristianbara.github.io/" target="_blank" id="logo" class="logo-link">
+        </a>
+        
     </div>
     
     <div class="gwd-div-1n6y" id="body">

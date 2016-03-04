@@ -102,4 +102,11 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage'])
             
         }
         
+        $scope.deleteList = function() {
+            // delete the entire list
+            $scope.model = [];
+            // save change in local storage
+            $localStorage.myToDos = $scope.model;
+        }
+        
     });
