@@ -45,6 +45,19 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 html,
 body {
@@ -95,11 +108,11 @@ body {
 }
 
 .gwd-div-1vyq {
-    position: fixed;
+    position:fixed;
     left: 0px;
     top: 0px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     font-family: 'Arial', sans-serif;
     font-weight: 100;
     font-size: 22px;
@@ -112,6 +125,7 @@ body {
             background-repeat: repeat; */
     background-color: #00796B;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    z-index: 0;
 }
 
 .gwd-div-1n6y {
@@ -279,7 +293,33 @@ body {
     background-position: center center;
 }
 .titleIcon {
-    height: 90%;
-    vertical-align:middle; 
-    margin-right: 30px;
+    position: absolute;
+    top:2px;
+    left:10px;
+    height: 45px;
+    z-index: 2;
+}
+
+.sliding-menu {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 60px;
+    height: 100%;
+    background: black;
+    z-index: 1;
+    display: block;
+    
+}
+
+.menu-item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    float:left;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
 }

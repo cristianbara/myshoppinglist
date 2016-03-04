@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>My shopping list</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -16,7 +18,19 @@
 <body ng-controller="myToDoAppController">
     <!-- <div class="gwd-div-bkij" id="background"></div> -->
     <!-- <div class="gwd-div-1stp" id="phone"> -->
-    <div class="gwd-div-1vyq" id="title"> <img src="icon_x.png" class="titleIcon"> My Shopping List </div>
+    <div class="gwd-div-1vyq" id="title">
+         My Shopping List 
+    </div>
+    <img src="icon_x.png" class="titleIcon" ng-click="toggleMenu()">
+    <div id="sliding-menu" class="sliding-menu" ng-if="showMenu">
+        <div id="top-spacer" class="menu-item">
+            <!-- leave empty -->
+        </div>
+        <div id="reset-list" class="menu-item" ng-click="resetList()">
+            <i class="material-icons md-light">autorenew</i>
+        </div>
+    </div>
+    
     <div class="gwd-div-1n6y" id="body">
         <div ng-repeat="item in model" class="gwd-div-1g9m" ng-class="{done: item.done == true}" ng-switch="item.done">
             <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="true">

@@ -23,6 +23,7 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage'])
         }
     
         var orderBy = $filter('orderBy');
+        $scope.showMenu = false;
     
         $scope.orderModel = function() {
             $scope.model = orderBy($scope.model,'done',false);
@@ -85,6 +86,20 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage'])
             // save the new $scope model to local storage
             $localStorage.myToDos = $scope.model;
 
+        }
+        
+        $scope.toggleMenu = function() {
+            $scope.showMenu = !$scope.showMenu;
+        }
+        
+        $scope.resetList = function() { 
+            // reset all the existing items in the model
+            for (i = 0; i < $scope.model.length; i++) {
+                $scope.model[i].done = false;                    
+            }
+            // save change in local storage
+            $localStorage.myToDos = $scope.model;
+            
         }
         
     });
