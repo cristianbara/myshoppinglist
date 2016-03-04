@@ -9,6 +9,14 @@ var model = [
     },
 
 ];
+var openURL = function(stringURL) {
+    if(device.platform === 'Android') {
+        navigator.app.loadUrl(url, {openExternal:true});
+    } else {
+        window.open(url, '_system');
+    }
+};
+
 angular.module('myToDoApp', ['contenteditable', 'ngStorage'])
     .controller('myToDoAppController',function ($scope, $filter, $localStorage) {
         // controller code goes here
