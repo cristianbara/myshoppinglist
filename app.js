@@ -1,3 +1,7 @@
+/* 
+ * (c) 2016 Cristian-Dan Bara, http://cristianbara.github.io/
+ * License: CC BY-NC-ND 3.0, http://creativecommons.org/licenses/by-nc-nd/3.0/
+*/
 var model = [
     {
         text: 'Something you still have to buy',
