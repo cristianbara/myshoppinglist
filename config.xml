@@ -33,6 +33,8 @@
   <icon src="icon_l.png" gap:platform="winphone"/>
   <icon src="icon_l.png" gap:platform="winphone" gap:role="background"/>
     
+  <plugin name="org.li8.inappbrowser" spec="0.1" source="pgb" />
+    
   <platform name="android">    
   </platform>
     
