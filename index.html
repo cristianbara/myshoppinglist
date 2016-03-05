@@ -9,7 +9,9 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="cordova.js"></script>
     <script src="angular.min.js"></script>
+    <script src="angular-animate.js"></script>
     <script src="angular-contenteditable.js"></script>
     <script src="ngStorage.js"></script>
     <script src="app.js"></script>
@@ -19,7 +21,7 @@
     <!-- <div class="gwd-div-bkij" id="background"></div> -->
     <!-- <div class="gwd-div-1stp" id="phone"> -->
     <div class="gwd-div-1vyq" id="title">
-         My Shopping List 
+        My Shopping List
     </div>
     <img src="icon_x.png" class="titleIcon" ng-click="toggleMenu()">
     <div id="sliding-menu" class="sliding-menu" ng-if="showMenu">
@@ -32,21 +34,23 @@
         <div id="delete-list" class="menu-item" ng-click="deleteList()">
             <i class="material-icons md-light">delete</i>
         </div>
-        
+
         <a id="logo" href="#" onClick="openURL('https://cristianbara.github.io')" class="logo-link">
         </a>
-        
+
     </div>
-    
+
     <div class="gwd-div-1n6y" id="body">
-        <div ng-repeat="item in model" class="gwd-div-1g9m" ng-class="{done: item.done == true}" ng-switch="item.done">
-            <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="true">
-                <!-- {{item.text}} -->
-            </div>
-            <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
-            <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
-            <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
-                <i class="material-icons">replay</i>
+        <div ng-repeat="item in model" class="gwd-div-1g9m animate-list">
+            <div ng-switch="item.done">                
+                <div class="gwd-div-text" style="" contenteditable="true" ng-model="item.text" strip-br="true" strip-tags="true" select-non-editable="false" ng-class="{done: item.done == true}">
+                    <!-- {{item.text}} -->
+                </div>
+                <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
+                <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
+                <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
+                    <i class="material-icons">replay</i>
+                </div>
             </div>
         </div>
     </div>

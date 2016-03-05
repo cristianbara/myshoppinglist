@@ -216,8 +216,7 @@ body {
 .gwd-div-1g9m {
     position: relative;
     float: left;
-    margin-left: 5%;
-    margin-left: 5%;
+    margin-left: 5%;    
     margin-bottom: 20px;
     width: 90%;
     min-height: 40px;
@@ -342,3 +341,40 @@ box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+/*Animate the sliding menu*/
+.sliding-menu.ng-enter, .sliding-menu.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s; /* Chrome */
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+
+.sliding-menu.ng-enter,
+.sliding-menu.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.sliding-menu.ng-leave,
+.sliding-menu.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/*Animate the shopping list*/
+.animate-list.ng-move,
+.animate-list.ng-enter,
+.animate-list.ng-leave {
+   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s; /* Chrome */
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+}
+
+.animate-list.ng-leave.ng-leave-active,
+.animate-list.ng-enter {
+  opacity:0;
+  margin-left: 50%;
+}
+
+.animate-list.ng-leave,
+.animate-list.ng-enter.ng-enter-active {
+  opacity:1;
+  margin-left: 5%;
+}
+
