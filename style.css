@@ -346,8 +346,8 @@ box-shadow: 16px -2px 45px -9px rgba(0,0,0,0.5);
 
 /*Animate the sliding menu*/
 .sliding-menu.ng-enter, .sliding-menu.ng-leave {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s; /* Chrome */
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s; /* Chrome */
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
 }
 
 .sliding-menu.ng-enter,
