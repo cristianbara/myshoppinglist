@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="io.cristianbara.github.myShoppingList" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="io.cristianbara.github.myShoppingList" version="1.0.0">
     <name>My Shopping List</name>
     <description>Organize your shopping with this easy to use app.</description>
     <author href="http://cristianbara.github.io" email="cristian.dan.bara@gmail.com">CB web dev.</author>
@@ -30,16 +30,22 @@
     <icon src="icon_l.png" gap:platform="winphone" />
     <icon src="icon_l.png" gap:platform="winphone" gap:role="background" />
 
-   
+
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="4000" />
-    
+
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="splash.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="splash.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="splash.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="splash.png" />
-    
+
     <gap:splash src="splash.png" />
-    
+
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:theme="@android:style/Theme.NoTitleBar">
+            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        </application>
+    </gap:config-file>
+
 </widget>
