@@ -6,7 +6,7 @@
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="handset" />
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -43,8 +43,7 @@
     <gap:splash src="splash.png" />
 
     <gap:config-file platform="android" parent="/manifest">
-        <application android:theme="@android:style/Theme.NoTitleBar">
-            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <application android:theme="@android:style/Theme.NoTitleBar">            
         </application>
     </gap:config-file>
 
