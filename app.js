@@ -103,6 +103,9 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
 
             // save the new $scope model to local storage
             $localStorage.myToDos = $scope.model;
+            
+            // hide menu
+            $scope.showMenu = false;
 
             //refresh $scope
             //$scope.$apply();
