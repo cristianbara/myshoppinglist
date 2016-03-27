@@ -71,7 +71,7 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
              */
             $timeout(function () {
                 $scope.orderModel();
-            }, 200);
+            }, 500);
 
         }
 
@@ -130,14 +130,21 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
             }
             // save change in local storage
             $localStorage.myToDos = $scope.model;
+            
+            //toggle the menu
+            $scope.toggleMenu();
 
         }
 
         $scope.deleteList = function () {
             // delete the entire list
             $scope.model = [];
+            
             // save change in local storage
             $localStorage.myToDos = $scope.model;
+            
+            //toggle the menu
+            $scope.toggleMenu();
         }
 
     });

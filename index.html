@@ -29,15 +29,14 @@
             <!-- leave empty -->
         </div>
         <div id="reset-list" class="menu-item" ng-click="resetList()">
-            <i class="material-icons md-light">autorenew</i>
+            <img width="36" src="assets/icons/ic_autorenew_white_36px.svg" style="margin-top:6px;">
         </div>
         <div id="delete-list" class="menu-item" ng-click="deleteList()">
-            <i class="material-icons md-light">delete</i>
+            <img width="36" src="assets/icons/ic_delete_forever_white_36px.svg" style="margin-top:6px;">
         </div>
 
-        <a id="logo" href="#" onClick="openURL('https://cristianbara.github.io')" class="logo-link">
-        </a>
-
+        <!-- <a id="logo" href="#" onClick="openURL('https://cristianbara.github.io')" class="logo-link">
+        </a> -->
     </div>
 
     <div class="gwd-div-1n6y" id="body">
@@ -49,16 +48,21 @@
                 <div class="gwd-div-pjjz check" ng-switch-when="false" ng-click="markAsDone(item)"></div>
                 <div class="gwd-div-pjjz cross done-btn" ng-switch-when="true" ng-click="removeToDo(item)"></div>
                 <div class="gwd-div-pjjz-r" ng-switch-when="true" ng-click="markUndone(item)">
-                    <i class="material-icons">replay</i>
+                    
+                    <svg fill="#388136" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg" style="margin-top:8px;">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+</svg>
+                                        
                 </div>
             </div>
         </div>
     </div>
     <div class="gwd-div-cb5l" id="button" ng-click="addToDo()">
-        <i class="material-icons">add</i>
+        <img class="action-icon" width="42" src="assets/icons/ic_add_white_48px.svg" style="margin-top: 6px;">
     </div>
     <div class="gwd-div-cb5l1" id="button" ng-click="orderModel()" ng-show="false">
-        <i class="material-icons">import_export</i>
+        
     </div>
     <!-- </div> -->
 
