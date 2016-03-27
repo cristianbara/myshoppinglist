@@ -33,6 +33,8 @@
   <icon src="icon_l.png" gap:platform="winphone"/>
   <icon src="icon_l.png" gap:platform="winphone" gap:role="background"/>
     
+  <splash src="splash.png"/>
+    
   <platform name="android"> 
       <access origin="*" onlyInBrowser="true" />
   </platform>
