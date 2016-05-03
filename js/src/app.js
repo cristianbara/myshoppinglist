@@ -79,13 +79,13 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
             // save the new $scope model to local storage
             $localStorage.myToDos = $scope.model;
         };
-        
-        
+
+
 
         /*
          * Item functions
          */
-        
+
         /*
          * Function which marks an item as done.
          * @param {object} item - a @model item
@@ -166,6 +166,12 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
 
 
 
+
+        /*
+         *Left hand side menu functions
+         */
+
+
         /*
          * Function which toggles the left hand side menu.
          * @return {undefined}
@@ -174,12 +180,6 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
             $scope.showMenu = !$scope.showMenu;
         };
 
-
-
-
-        /*
-         *Left hand side menu functions
-         */
 
 
         /*
@@ -198,9 +198,9 @@ angular.module('myToDoApp', ['contenteditable', 'ngStorage', 'ngAnimate'])
             $scope.toggleMenu();
 
         };
-    
-    
-    
+
+
+
         /*
          * Function which deletes all items in the @model
          * @return {undefined}
